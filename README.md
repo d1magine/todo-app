@@ -31,12 +31,14 @@ Users should be able to:
 
 ### Screenshots
 
-![](./screenshot.jpg)
+![image](https://github.com/d1magine/todo-app/assets/82451955/ea6aa4a8-8e7d-4efc-80e7-636193da04a8)
+![image](https://github.com/d1magine/todo-app/assets/82451955/71003611-2eec-476a-83a3-301aa8b8ca88)
+
 
 ### Links
 
-- Solution URL: [GitHub](-)
-- Live Site URL: [Netlify](-)
+- Solution URL: [GitHub](https://github.com/d1magine/todo-app)
+- Live Site URL: [Netlify](https://d1m-todo-app.netlify.app/)
 
 ## My process
 
