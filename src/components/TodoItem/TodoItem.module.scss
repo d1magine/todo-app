@@ -1,0 +1,88 @@
+@import '../../assets/styles/mixins';
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--todo-background);
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--checkbox-border-color);
+
+  @include desktop {
+    &:hover button {
+      opacity: 1;
+    }
+  }
+
+  div {
+    @include todo-checkbox;
+    cursor: pointer;
+    background: var(--checkbox-border-color);
+    position: relative;
+    flex-shrink: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background-color: var(--todo-background);
+      top: 1px;
+      bottom: 1px;
+      right: 1px;
+      left: 1px;
+    }
+
+    &:hover {
+      background: var(--gradient);
+    }
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--todo-color);
+    cursor: pointer;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
+  button {
+    transition: opacity 0.21s;
+    background-color: transparent;
+    margin-left: auto;
+    flex-shrink: 0;
+
+    @include desktop {
+      opacity: 0;
+    }
+
+    img {
+      width: 14px;
+
+      @include desktop {
+        width: auto;
+      }
+    }
+  }
+
+  &-completed {
+    p {
+      text-decoration: line-through;
+      color: var(--todo-completed-color);
+    }
+
+    div {
+      background: var(--gradient);
+
+      &::after {
+        background: url('../../assets/images/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

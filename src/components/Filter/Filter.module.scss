@@ -1,0 +1,69 @@
+@import '../../assets/styles/mixins';
+
+.filters-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--todo-background);
+  padding: 16px 22px;
+  font-size: 14px;
+  border-radius: 0 0 6px 6px;
+
+  span {
+    color: var(--filter-color);
+  }
+
+  ul {
+    display: none;
+    gap: 20px;
+
+    @include desktop {
+      display: flex;
+    }
+
+    li {
+      @include filter-option;
+
+      &:hover {
+        color: var(--filter-color-hover);
+      }
+    }
+  }
+
+  button {
+    transition: color 0.16s;
+    color: var(--filter-color);
+    background-color: transparent;
+
+    &:hover {
+      color: var(--filter-color-hover);
+    }
+  }
+}
+
+.filters-mobile {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  background-color: var(--todo-background);
+  padding-block: 14px;
+  border-radius: 6px;
+  box-shadow: var(--small-shadow);
+
+  @include desktop {
+    display: none;
+  }
+
+  li {
+    @include filter-option;
+
+    &:hover {
+      color: var(--filter-color-hover);
+    }
+  }
+}
+
+.filter-active {
+  color: var(--bright-blue) !important;
+}

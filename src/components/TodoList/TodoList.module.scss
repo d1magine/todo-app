@@ -1,0 +1,12 @@
+@import '../../assets/styles/mixins';
+
+.todos-list {
+  overflow: hidden;
+  margin-top: 15px;
+  border-radius: 6px 6px 0 0;
+  box-shadow: var(--shadow);
+
+  @include desktop {
+    margin-top: 25px;
+  }
+}

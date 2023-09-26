@@ -1,0 +1,24 @@
+@import '../../assets/styles/mixins';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 10px;
+
+    @include desktop {
+      font-size: 35px;
+      letter-spacing: 15px;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    margin-bottom: 7px;
+  }
+}

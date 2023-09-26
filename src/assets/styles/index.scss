@@ -1,0 +1,22 @@
+@import './reset';
+@import './variables';
+@import './mixins';
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+
+  body {
+    min-height: 100vh;
+    padding-inline: 20px;
+    background-color: var(--body-background);
+    background-image: var(--body-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background-color 0.21s, background-image 0.21s;
+
+    @include desktop {
+      background-image: var(--body-image-desktop);
+    }
+  }
+}

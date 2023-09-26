@@ -1,0 +1,11 @@
+@import '../assets/styles/mixins';
+
+.container {
+  max-width: 540px;
+  margin-inline: auto;
+  padding-block: 40px;
+
+  @include desktop {
+    padding-block: 60px;
+  }
+}
