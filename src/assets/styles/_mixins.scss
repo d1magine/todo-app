@@ -12,6 +12,7 @@
 }
 
 @mixin filter-option {
+  text-transform: capitalize;
   font-size: 14px;
   font-weight: 700;
   color: var(--filter-color);

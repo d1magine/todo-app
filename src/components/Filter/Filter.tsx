@@ -27,37 +27,28 @@ export default function Filter() {
       <div className={styles['filters-wrapper']}>
         <span>{todosLeft} items left</span>
         <ul>
-          <li
-            className={classNames(
-              filter === TFilter.All && styles['filter-active']
-            )}
-            onClick={() => handleFilterChanged(TFilter.All)}
-          >
-            All
-          </li>
-          <li
-            className={classNames(
-              filter === TFilter.Active && styles['filter-active']
-            )}
-            onClick={() => handleFilterChanged(TFilter.Active)}
-          >
-            Active
-          </li>
-          <li
-            className={classNames(
-              filter === TFilter.Completed && styles['filter-active']
-            )}
-            onClick={() => handleFilterChanged(TFilter.Completed)}
-          >
-            Completed
-          </li>
+          {Object.values(TFilter).map((f) => (
+            <li
+              key={f}
+              className={classNames(filter === f && styles['filter-active'])}
+              onClick={() => handleFilterChanged(f)}
+            >
+              {f}
+            </li>
+          ))}
         </ul>
         <button onClick={handleCompletedCleared}>Clear Completed</button>
       </div>
       <ul className={styles['filters-mobile']}>
-        <li>All</li>
-        <li>Active</li>
-        <li>Completed</li>
+        {Object.values(TFilter).map((f) => (
+          <li
+            key={f}
+            className={classNames(filter === f && styles['filter-active'])}
+            onClick={() => handleFilterChanged(f)}
+          >
+            {f}
+          </li>
+        ))}
       </ul>
     </>
   );
